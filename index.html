@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#16130f" />
+<title>Ama · Meshy 6 Lite asset inspection</title>
+  <script type="module" crossorigin src="/sola-ama-model-preview/assets/index-BlTcbUi9.js"></script>
+  <link rel="stylesheet" crossorigin href="/sola-ama-model-preview/assets/index-e7CrXBEG.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <div class="label"><span class="dot"></span><h1>Ama · Meshy 6 Lite asset inspection</h1></div>
+    <button id="reset" type="button" disabled>Reset view</button>
+  </header>
+  <main class="stage" id="stage">
+    <canvas id="view" aria-label="3D view of the Ama model"></canvas>
+    <div class="overlay" id="loading" role="status" aria-live="polite">
+      <div class="spinner"></div>
+      <p id="loadText">Loading model… 0%</p>
+      <div class="track" id="track"><div class="fill" id="loadFill"></div></div>
+    </div>
+    <div class="overlay error" id="error" role="alert" hidden>
+      <p class="err-title">Model failed to load</p>
+      <p class="err-text" id="errText"></p>
+      <button id="retry" type="button">Retry</button>
+    </div>
+    <p class="hint" id="hint" hidden>Drag to orbit · Pinch or scroll to zoom</p>
+  </main>
+  <aside class="notes">
+    <h2>Inspection notes</h2>
+    <ul>
+      <li><strong>Separate clothes unavailable.</strong> Clothing is part of the generated mesh and texture. You can't remove or swap garments.</li>
+      <li><strong>Sitting deformation fails.</strong> Seated poses deform incorrectly, so this asset isn't usable for sitting animation.</li>
+      <li><strong>Not approved game art.</strong> This is an optimized Meshy 6 Lite research asset, shown for review only.</li>
+    </ul>
+    <p class="credit">Ama model: Meshy 6 Lite, CC BY 4.0. Idle motion is a separate procedural Blender addition, not Meshy-generated.</p>
+    <dl class="stats" id="stats"></dl>
+  </aside>
+</div>
+</body>
+</html>
